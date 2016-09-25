@@ -1,0 +1,12 @@
+--recurse=yes
+--exclude=.git
+--exclude=node_modules/*
+--exclude=db/*
+--exclude=log/*
+--exclude=public/*
+--exclude=storate/*
+--exclude=bootstrap/*
+--exclude=*.html
+--exclude=*.css
+--exclude=*.js
+--exclude=database/*
