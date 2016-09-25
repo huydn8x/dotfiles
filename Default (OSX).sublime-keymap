@@ -1,0 +1,22 @@
+[
+  {
+    "keys": ["super+e"], "command": "goto_definition"
+  },
+  {
+    "keys": ["j", "j"],
+    "command": "exit_insert_mode",
+    "context":
+    [
+        { "key": "setting.command_mode", "operand": false },
+        { "key": "setting.is_widget", "operand": false }
+    ]
+  },
+  {
+      "command": "navigate_to_definition",
+      "keys": ["ctrl+]"]
+  },
+  {
+      "command": "rebuild_tags",
+      "keys": ["ctrl+t", "ctrl+r"]
+  }
+]
