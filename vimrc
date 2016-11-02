@@ -20,7 +20,7 @@ function! LoadVundle()
     Plugin 'ctrlpvim/ctrlp.vim'
     Plugin 'Raimondi/delimitMate'
     Plugin 'mattn/emmet-vim'
-    Plugin 'scrooloose/syntastic'
+    "Plugin 'scrooloose/syntastic'
     Plugin 'fatih/vim-go'
     Plugin 'airblade/vim-gitgutter'
     Plugin 'vim-airline/vim-airline'
@@ -71,7 +71,7 @@ set backspace=indent,eol,start
 set hlsearch
 set incsearch
 set ignorecase
-set smartcase
+"set smartcase
 " Show (partial) command in the status line
 "set showcmd
 " Use modeline overrides
@@ -191,7 +191,7 @@ command W w
 command Q q
 
 set rtp+=$GOPATH/src/github.com/nsf/gocode/vim
-autocmd BufWritePre * %s/\s\+$//e
+"autocmd BufWritePre * %s/\s\+$//e
 
 "ctrp
 if executable('ag')
@@ -202,10 +202,14 @@ endif
 set path+=**
 let g:vim_json_syntax_conceal = 0
 set completeopt=longest,menuone
-let g:completor_go_omni_trigger = '(?:\b[^\W\d]\w*|[\]\)])\.(?:[^\W\d]\w*)?'
-let g:completor_css_omni_trigger = '([\w-]+|@[\w-]*|[\w-]+:\s*[\w-]*)$'
 let g:goldenview__enable_default_mapping = 0
+set runtimepath^=~/.vim/bundle/ag
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
-set runtimepath^=~/.vim/bundle/ag
+let g:completor_go_omni_trigger = '(?:\b[^\W\d]\w*|[\]\)])\.(?:[^\W\d]\w*)?'
+let g:completor_css_omni_trigger = '([\w-]+|@[\w-]*|[\w-]+:\s*[\w-]*)$'
+let g:completor_php_omni_trigger = '\w+|[^. \t]->\w*|\w+::\w*'
+let g:completor_javascript_omni_trigger = 'tern#Complete'
+let g:completor_min_chars = 2
+let g:completor_node_binary="/usr/local/bin/node"
