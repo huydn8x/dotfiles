@@ -1,5 +1,4 @@
 "set nocompatible
-set viminfo="NONE"
 function! LoadVundle()
     let vundle_installed=filereadable(expand('~/.vim/bundle/vundle/README.md'))
     if vundle_installed == 0
@@ -210,9 +209,13 @@ set runtimepath+=~/.vim/bundle/deoplete.nvim/
 let g:goldenview__enable_default_mapping = 0
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#omni_patterns = {}
-let g:deoplete#omni_patterns.php = '\h\w*\|[^. \t]->\%(\h\w*\)\?\|\h\w*::\%(\h\w*\)\?'
+" let g:deoplete#omni_patterns.php = '\h\w*\|[^. \t]->\%(\h\w*\)\?\|\h\w*::\%(\h\w*\)\?'
 let g:deoplete#omni_patterns.go = '[^. \t0-9]\.\w*'
 set mouse=
 let g:UltiSnipsExpandTrigger="<tab>"
 filetype plugin indent on
-
+set viminfo="NONE"
+"neovim
+if has('nvim')
+    nmap <BS> <C-W>h
+endif
