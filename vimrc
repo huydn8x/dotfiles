@@ -1,5 +1,4 @@
 "set nocompatible
-filetype plugin on
 set viminfo="NONE"
 function! LoadVundle()
     let vundle_installed=filereadable(expand('~/.vim/bundle/vundle/README.md'))
@@ -33,6 +32,8 @@ function! LoadVundle()
     Plugin 'vim-airline/vim-airline-themes'
     Plugin 'Shougo/deoplete.nvim'
     Plugin 'ervandew/supertab'
+    Plugin 'SirVer/ultisnips'
+    Plugin 'honza/vim-snippets'
 
     if vundle_installed==0
         echo vundle_installed
@@ -72,7 +73,7 @@ set backspace=indent,eol,start
 " Searching
 set hlsearch
 set incsearch
-set ignorecase
+"set ignorecase
 "set smartcase
 " Show (partial) command in the status line
 "set showcmd
@@ -212,3 +213,6 @@ let g:deoplete#omni_patterns = {}
 let g:deoplete#omni_patterns.php = '\h\w*\|[^. \t]->\%(\h\w*\)\?\|\h\w*::\%(\h\w*\)\?'
 let g:deoplete#omni_patterns.go = '[^. \t0-9]\.\w*'
 set mouse=
+let g:UltiSnipsExpandTrigger="<tab>"
+filetype plugin indent on
+
