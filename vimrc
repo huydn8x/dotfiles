@@ -32,8 +32,7 @@ function! LoadVundle()
     Plugin 'Shougo/deoplete.nvim'
     Plugin 'ervandew/supertab'
     Plugin 'SirVer/ultisnips'
-    Plugin 'honza/vim-snippets'
-    Plugin 'epilande/vim-react-snippets'
+    Plugin 'phuc-ngo/vim-snippets'
 
     if vundle_installed==0
         echo vundle_installed
