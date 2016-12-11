@@ -219,3 +219,5 @@ set viminfo="NONE"
 if has('nvim')
     nmap <BS> <C-W>h
 endif
+" format json
+autocmd BufRead,BufNewFile *.json :%!python -m json.tool
