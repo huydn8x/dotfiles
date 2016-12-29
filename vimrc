@@ -26,13 +26,15 @@ function! LoadVundle()
     Plugin 'mxw/vim-jsx'
     Plugin 'elzr/vim-json'
     Plugin 'brantb/vim-colors-solarized'
-    "Plugin 'maralla/completor.vim'
     Plugin 'zhaocai/GoldenView.Vim'
     Plugin 'vim-airline/vim-airline-themes'
     Plugin 'Shougo/deoplete.nvim'
     Plugin 'ervandew/supertab'
     Plugin 'SirVer/ultisnips'
-    Plugin 'phuc-ngo/vim-snippets'
+    Plugin 'honza/vim-snippets'
+    Plugin 'rking/ag.vim'
+    Plugin 'romainl/Apprentice'
+    Plugin 'pangloss/vim-javascript'
 
     if vundle_installed==0
         echo vundle_installed
@@ -221,3 +223,9 @@ if has('nvim')
 endif
 " format json
 autocmd BufRead,BufNewFile *.json :%!python -m json.tool
+" jsx
+let g:user_emmet_settings = {
+\  'javascript.jsx' : {
+\      'extends' : 'jsx',
+\  },
+\}
